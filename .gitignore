@@ -1,0 +1,33 @@
+.env
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Build directories (adjust as necessary)
+bin/
+builds/
+dist/
+
+# Go build artifacts
+*.a
+*.o
+*.so
+
+# Dependency directories (remove vendor/ if using Go modules)
+vendor/
+
+# Test binary, coverage, etc.
+*.test
+coverage.out
+
+# IDE or Editor folders
+.idea/
+.vscode/
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
