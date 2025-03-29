@@ -8,7 +8,7 @@ import (
 
 // Define a struct for the data
 type LicenseData struct {
-	Name    string `json:"name"`
+	Name    string `json:"username"`
 	Email   string `json:"email"`
 	License string `json:"license"`
 }

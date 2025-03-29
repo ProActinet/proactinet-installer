@@ -14,8 +14,17 @@ import (
 
 
 
-func Authentication(dsn string) {
+func Authentication(envMap map[string]string) {
 	Welcome()
+	fmt.Println("\033[33m\nWelcome to the authentication program!\033[0m")
+	// Build DSN for Postgres using environment variables
+	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=require",
+		envMap["DB_HOST"],
+		envMap["DB_USER"],
+		envMap["DB_PASSWORD"],
+		envMap["DB_NAME"],
+		envMap["DB_PORT"],
+	)
 
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{
 		Logger: logger.Default.LogMode(logger.Silent),

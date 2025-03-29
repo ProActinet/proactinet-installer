@@ -30,9 +30,9 @@ func main() {
 		os.Exit(1)
 	}	
 
-	dsn := db.EnvLoader()
+	envMap := db.EnvLoader()
 
-	auth.Authentication(dsn)
+	auth.Authentication(envMap)
 
 	commands := []Command{
 		{"apt update", "Updating package lists", "📦"},
